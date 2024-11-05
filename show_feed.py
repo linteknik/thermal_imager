@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 256)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 384) # The camera resolution is 192x256 but the bottom half is a variant of the top half and has the temperature data
-cap.set(cv2.CAP_PROP_CONVERT_RGB, 0.0) # Turns the 384x256x2 data into a flat 1x196608 array and prevents cv2 from messing up the data from its own interpretation
+cap.set(cv2.CAP_PROP_CONVERT_RGB, 0.0) # Turns the 384x256x2 data into a flat 1x196608 array and prevents cv2 from messing up the data from its own interpretation. This line does not appear to work on a Raspbery Pi. If so, a if "os.name=='posix': frame = frame.reshape([1,-1])" can be used too manually achieve this.
 
 if not cap.isOpened():
     print("Error: Could not open video device.")
