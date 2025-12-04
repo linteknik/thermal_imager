@@ -24,3 +24,7 @@ The camera is sensitive enough to detect a chip ![turning on or off](https://git
 
 - [EEVBlog Forum Discussion](https://www.eevblog.com/forum/thermal-imaging/infiray-and-their-p2-pro-discussion/200/)
 - [LeoDJ's Formula and Exploration](https://chaos.social/@LeoDJ/109633033381602083)
+
+## Camera selection
+
+If you have multiple camera's change the number in cv2.VideoCapture(x) to select the thermal camera.
